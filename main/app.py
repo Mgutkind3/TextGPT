@@ -48,10 +48,10 @@ def getText():
 def sendText(response):
     print('sending response')
 
-    account_sid = os.environ["TWILIO_ACCT_SID"]
-    auth_token = os.environ["TWILIO_AUTH_TOKEN"]
-    fromNum = os.environ["FROM_NUMBER"]
-    toNum = os.environ["TO_NUMBER"]
+    account_sid = os.environ.get("TWILIO_ACCT_SID")
+    auth_token = os.environ.get("TWILIO_AUTH_TOKEN")
+    fromNum = os.environ.get("FROM_NUMBER")
+    toNum = os.environ.get("TO_NUMBER")
     client = Client(account_sid, auth_token)
     message = client.messages.create(
         body=response,
@@ -67,7 +67,7 @@ def callGPT(question):
 
     headers = {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + os.environ["OPENAI_API_KEY"],
+        'Authorization': 'Bearer ' + os.environ.get("OPENAI_API_KEY"),
     }
 
     json_data = {
