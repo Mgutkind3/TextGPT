@@ -64,11 +64,10 @@ def sendText(response):
 
 def callGPT(question):
     print('Calling GPT')
-    test = os.getenv("OPENAI_API_KEY")
 
     headers = {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + os.getenv('OPENAI_API_KEY'),
+        'Authorization': 'Bearer ' + os.environ('OPENAI_API_KEY'),
     }
 
     json_data = {
