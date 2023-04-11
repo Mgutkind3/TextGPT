@@ -1,8 +1,6 @@
 import os
-import openai
 import requests
 from twilio.rest import Client
-from twilio.twiml.messaging_response import MessagingResponse
 from flask import Flask, jsonify, request
 import json
 
