@@ -67,7 +67,7 @@ def callGPT(question):
 
     headers = {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + os.environ['OPENAI_API_KEY'],
+        'Authorization': 'Bearer ' + os.environ["OPENAI_API_KEY"],
     }
 
     json_data = {
